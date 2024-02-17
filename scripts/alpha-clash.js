@@ -107,12 +107,18 @@ function continueGame(){
 
 
 function play(){
+    // hide everything show only the playground
     hideElementById('home-screen');
+    hideElementById('score');
     showElementById('play-ground');
+
+    // reset score & life
+    setTextElementValueById('current-life', 5);
+    setTextElementValueById('current-score', 0);
     continueGame();
 }
 
 function gameOver(){
     hideElementById('play-ground');
-    showElementById('score')
+    showElementById('score');
 }
