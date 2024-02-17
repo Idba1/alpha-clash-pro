@@ -25,20 +25,31 @@ function handleKeyboardKeyUpEvent(event){
     // check matched or not
     if(playerPressed === currentAlphabet){
         console.log('you get a point');
-        console.log('you have pressed correctly', currentAlphabet);
-        console.log(currentAlphabet);
+        // console.log('you have pressed correctly', currentAlphabet);
+        // console.log(currentAlphabet);
+
+        const currentScore = getTextElementValueById('current-score');
+        const UpdatedScore = currentScore + 1;
+        setTextElementValueById('current-score', UpdatedScore)
+
+
+
+        // ---------------------------------------------------------
         // update score:
         // step-1: get the current score
-        const currentScoreElement = document.getElementById('current-score');
-        const currentScoreText = currentScoreElement.innerText;
-        const currentScore = parseInt(currentScoreText);
-        console.log(currentScoreText);
+        // const currentScoreElement = document.getElementById('current-score');
+        // const currentScoreText = currentScoreElement.innerText;
+        // const currentScore = parseInt(currentScoreText);
+        // console.log(currentScoreText);
 
-        // step-2: increase the score by 1
-        const newScore = currentScore + 1;
 
-        // step-3: show the update score
-        currentScoreElement.innerText = newScore;
+        // // step-2: increase the score by 1
+        // const newScore = currentScore + 1;
+
+
+        // // step-3: show the update score
+        // currentScoreElement.innerText = newScore;
+
 
 
         // start a new round
@@ -48,15 +59,15 @@ function handleKeyboardKeyUpEvent(event){
     else{
         console.log('you missed. you lost a life');
         // step-1: get the current life number
-        const currentLifeElement = document.getElementById('current-life');
-        const currentLifeText = currentLifeElement.innerText;
-        const currentLife = parseInt(currentLifeText);
+        // const currentLifeElement = document.getElementById('current-life');
+        // const currentLifeText = currentLifeElement.innerText;
+        // const currentLife = parseInt(currentLifeText);
 
-        // step-2: reduce the life count
-        const newLife = currentLife - 1;
+        // // step-2: reduce the life count
+        // const newLife = currentLife - 1;
 
-        // step-3: display the updated life count
-        currentLifeElement.innerText = newLife;
+        // // step-3: display the updated life count
+        // currentLifeElement.innerText = newLife;
     }
 }
 
