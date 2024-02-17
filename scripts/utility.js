@@ -33,6 +33,11 @@ function setTextElementValueById(elementId, value){
     element.innerText = value;
 }
 
+function getElementTextById(elementId){
+    const element = document.getElementById(elementId);
+    const text = element.innerText;
+    return text;
+}
 
 function getARandomAlphabet(){
     //step-1: get or create an alphabet array
