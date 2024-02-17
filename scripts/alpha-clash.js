@@ -58,6 +58,11 @@ function handleKeyboardKeyUpEvent(event){
     }
     else{
         console.log('you missed. you lost a life');
+
+        const currentLife = getTextElementValueById('current-life');
+        const updatedLife = currentLife-1;
+        setTextElementValueById('current-life', updatedLife)
+        // -----------------------------------------------------
         // step-1: get the current life number
         // const currentLifeElement = document.getElementById('current-life');
         // const currentLifeText = currentLifeElement.innerText;
