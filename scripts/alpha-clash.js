@@ -121,4 +121,8 @@ function play(){
 function gameOver(){
     hideElementById('play-ground');
     showElementById('score');
+    // update score
+    const finalScore = getTextElementValueById('current-score');
+    console.log(finalScore);
+    setTextElementValueById ('final-score', finalScore);
 }
